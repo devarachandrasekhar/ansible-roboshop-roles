@@ -1,5 +1,5 @@
-- name: Installing  Roboshop Project
-  hosts: mongodb
+- name: installing roboshop project 
+  hosts: "{{component}}"
   become: yes
   roles:
-  - mongodb
+  - "{{component}}"
