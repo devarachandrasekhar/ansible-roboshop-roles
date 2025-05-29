@@ -1,0 +1,8 @@
+[mongodb]
+mongodb.practicedevops.store
+
+[catalogue]
+catalogue.practicedevops.store
+
+[frontend]
+web.practicedevops.store
