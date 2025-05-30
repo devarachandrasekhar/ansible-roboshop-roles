@@ -5,7 +5,7 @@
 
 
 - name: setup applcation
-  ansible.builtin.import_roles:
+  ansible.builtin.import_role:
     name: common
     tasks_from: app_set_up
 
@@ -15,14 +15,14 @@
     chdir: /app
 
 - name: load mongo schema
-  ansible.builtin.import_roles:
+  ansible.builtin.import_role:
     name: common
     tasks_form: load_mongo_schema
 
 
 
 - name: systemd setup
-  ansible.builtin.import_roles:
+  ansible.builtin.import_role:
     name: common
     tasks_form: systemd_setup
 
