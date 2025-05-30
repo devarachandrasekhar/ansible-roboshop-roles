@@ -2,7 +2,7 @@
 mongodb.practicedevops.store
 
 [catalogue]
-#catalogue.practicedevops.store
+catalogue.practicedevops.store
 
 [frontend]
 web.practicedevops.store
