@@ -7,7 +7,7 @@
 - name: setup applcation
   ansible.builtin.import_roles:
     name: common
-    taks_from: app_set_up
+    tasks_from: app_set_up
 
 - name: install dependinces
   ansible.builtin.command: npm install
