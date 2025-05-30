@@ -4,5 +4,5 @@ mongodb.practicedevops.store
 [catalogue]
 catalogue.practicedevops.store
 
-[frontend]
+[web]
 web.practicedevops.store
