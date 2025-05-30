@@ -17,13 +17,13 @@
 - name: load mongo schema
   ansible.builtin.import_role:
     name: common
-    tasks_form: load_mongo_schema
+    tasks_from: load_mongo_schema
 
 
 
 - name: systemd setup
   ansible.builtin.import_role:
     name: common
-    tasks_form: systemd_setup
+    tasks_from: systemd_setup
 
   
