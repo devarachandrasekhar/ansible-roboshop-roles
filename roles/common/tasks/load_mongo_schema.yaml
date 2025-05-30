@@ -1,0 +1,15 @@
+- name: Copy mongo.repo
+  ansible.builtin.copy:
+    src: /home/ec2-user/ansible-roboshop/mongo.repo/
+    dest: /etc/yum.repos.d/mongo.repo
+- name: Install MongoDB shell
+  ansible.builtin.yum:
+    name: mongodb-mongosh
+    state: installed
+- name: load catalogue data into mongodb
+  ansible.builtin.shell: mongosh --host mongodb.practicedevops.store < /app/schema/catalogue.js 
+- name: start and enable the nodejs
+  ansible.builtin.service:
+    name: catalogue
+    state: started
+    enabled: true
