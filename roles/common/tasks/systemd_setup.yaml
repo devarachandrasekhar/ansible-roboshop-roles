@@ -1,11 +1,11 @@
-- name: copy {{component}} Service
+- name: copy {{component}}.service
   ansible.builtin.copy:
-    src: /home/ec2-user/ansible-roboshop/{{component}}.service/
-    dest: /etc/systemd/system/{{component}}.service 
-
-- name: Load the service
-  ansible.builtin.command: systemctl daemon-reload
-  become: true
+    src: "{{component}}.service"
+    dest: /etc/systemd/system/{{component}}.service
+    
+- name: demon reload
+  ansible.builtin.systemd:
+    daemon_reload: true 
 
 - name: start and enable the nodejs
   ansible.builtin.service:
